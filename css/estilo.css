@@ -1,0 +1,239 @@
+@charset "UTF-8";
+/*mixims*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.body_con_grid {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  display: inline;
+  padding: 10px 0;
+  background: #daae50;
+}
+
+h1 {
+  text-align: center;
+  color: #147766;
+  top: 20%;
+}
+
+.body_con_grid {
+  display: grid;
+  grid-gap: 1em;
+}
+
+nav {
+  margin: 32px auto auto;
+  position: relative;
+  width: 400px;
+  height: 50px;
+  background-color: #353832;
+  border-radius: 8px;
+  font-size: 0;
+}
+
+nav a {
+  line-height: 50px;
+  height: 100%;
+  font-size: 15px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+header img {
+  position: relative;
+  margin: 2px auto auto;
+}
+
+.flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diseño_adicional {
+  background-color: blanchedalmond;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.diseño_adicional .display-4 {
+  color: #1f423b;
+}
+
+.modal-body {
+  width: 500px;
+  height: 400px;
+}
+
+.diseño_adicional .btn {
+  margin-left: 80%;
+  background-color: darkslategray;
+}
+
+.btn-primary .boton_modal {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+li a {
+  text-decoration: none;
+}
+
+li {
+  justify-content: space-between;
+  display: inline-block;
+  list-style: none;
+  color: #1f2911;
+  text-overflow: ellipsis;
+  margin-left: 15px;
+  max-width: 1200px;
+}
+
+a:hover {
+  background-color: #dfe7b9;
+  color: #181414;
+  list-style: none;
+  text-decoration: none;
+}
+
+.imagenes ul li {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  display: inline-block;
+}
+
+.flex-header img {
+  width: auto;
+  height: auto;
+}
+
+.foto {
+  position: relative;
+  background-color: lightgrey;
+  padding: 50px;
+  margin: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+  height: 20%;
+}
+
+.contenedorinicial {
+  height: 600px;
+  background-color: rgba(202, 108, 0, 0.377);
+  /* por si no soporta el navegador la gradiente*/
+  background-image: linear-gradient(#f7ae27, #6ea15a);
+}
+
+.promo ul {
+  margin: 27px auto 0;
+  position: relative;
+}
+
+.promo li {
+  margin-left: 100px;
+  margin-right: 30px;
+  margin-bottom: auto;
+}
+
+.promo {
+  background-color: rgba(202, 108, 0, 0.377);
+  /* por si no soporta el navegador la gradiente*/
+  background-image: linear-gradient(#f7ae27, #6ea15a);
+}
+
+.promo .btn {
+  background-color: #349c7a;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "head head" "menu main" "foot foot";
+}
+
+iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.animacion div h2 {
+  margin: auto;
+  text-align: center;
+}
+
+/* ANIMACION */
+@keyframes cambiar_color {
+  0% {
+    background: #fcfcfc;
+    width: 100px;
+  }
+  30% {
+    background: lightgreen;
+  }
+  55% {
+    background: darkcyan;
+    width: 400px;
+  }
+  80% {
+    background: lightsalmon;
+  }
+  100% {
+    background: dimgray;
+    width: 100%;
+  }
+}
+.animacion div {
+  width: 300px;
+  height: 100%;
+  background: goldenrod;
+  animation-name: cambiar_color;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate-reverse;
+  animation-delay: 3s;
+}
+
+footer {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  height: 200px;
+  width: 100%;
+  background-color: #272727;
+  list-style: none;
+}
+
+footer h3 {
+  display: inline-block;
+  color: snow;
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  .body_con_grid {
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-areas: "nav nav nav nav " "header header" "main main  alerta  jumbotron diseño_adicional contenedorfondo contenedorinicial" "footer footer";
+  }
+}
